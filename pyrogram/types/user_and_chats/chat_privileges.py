@@ -70,15 +70,15 @@ class ChatPrivileges(Object):
         self,
         *,
         can_manage_chat: bool = True,
-        can_delete_messages: bool = False,
-        can_manage_video_chats: bool = False,  # Groups and supergroups only
-        can_restrict_members: bool = False,
-        can_promote_members: bool = False,
+        can_delete_messages: bool = True,
+        can_manage_video_chats: bool = True,  # Groups and supergroups only
+        can_restrict_members: bool = True,
+        can_promote_members: bool = True,
         can_change_info: bool = False,
         can_post_messages: bool = False,  # Channels only
         can_edit_messages: bool = False,  # Channels only
         can_invite_users: bool = False,
-        can_pin_messages: bool = False,  # Groups and supergroups only
+        can_pin_messages: bool = True,  # Groups and supergroups only
         is_anonymous: bool = False
     ):
         super().__init__(None)
